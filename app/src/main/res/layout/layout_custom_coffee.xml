@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageViewListCF"
+        android:layout_width="380dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/listitem2" />
+
+    <ImageView
+        android:id="@+id/imageViewMusicCF"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:foreground="@drawable/rounded_fg"
+        android:onClick="onClickImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/abc"
+        app:layout_constraintStart_toStartOf="@+id/imageViewListCF"
+        app:layout_constraintTop_toTopOf="@+id/imageViewListCF" />
+
+    <TextView
+        android:id="@+id/textViewNameCF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Muon ruou to tinh"
+        android:textSize="24dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMusicCF"
+        app:layout_constraintTop_toTopOf="@+id/imageViewListCF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:text="Information :"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMusicCF"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameCF" />
+
+    <TextView
+        android:id="@+id/textViewInfoCoffee"
+        android:layout_width="218dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
+        android:text="ABC"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMusicCF"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+
+</android.support.constraint.ConstraintLayout>

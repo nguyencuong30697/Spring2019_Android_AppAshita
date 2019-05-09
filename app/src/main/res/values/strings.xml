@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Firebase_LoginAuth</string>
+    <string name="facebook_application_id">821975041483020</string>
+    <string name="facebook_login_protocol_scheme">fb821975041483020</string>
+    <string name="title_activity_bottom_controller">BottomController</string>
+    <string name="title_home">List Music</string>
+    <string name="title_dashboard">Play Music</string>
+    <string name="title_coffee">Find Cafe</string>
+    <string name="title_notifications">Map</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

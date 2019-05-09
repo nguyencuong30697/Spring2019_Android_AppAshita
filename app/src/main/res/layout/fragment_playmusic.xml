@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.firebaseloginauth.Fragment.PlayyMusicAppFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="361dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="Tên bài hát"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong"
+        app:srcCompat="@drawable/previous" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong"
+        app:srcCompat="@drawable/play_button" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong"
+        app:srcCompat="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/btnStop"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarSong"
+        app:srcCompat="@drawable/skip" />
+
+    <SeekBar
+        android:id="@+id/seekBarSong"
+        android:layout_width="352dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimeStart" />
+
+            <TextView
+                android:id="@+id/txtTimeStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="00:00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imXoay" />
+
+            <TextView
+                android:id="@+id/txtTimeTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="8dp"
+                android:text="00:00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imXoay" />
+
+    <ImageView
+        android:id="@+id/imXoay"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorAccent"
+        android:foreground="@drawable/rounded_fg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/abc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+
+            <ImageView
+                android:id="@+id/imgcomment"
+                android:layout_width="400dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/commentimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPlay"/>
+
+            <ListView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                    android:id="@+id/list_commment"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_disabled"
+                    app:layout_constraintTop_toBottomOf="@+id/imgcomment"
+                    >
+
+            </ListView>
+
+            <EditText
+                android:id="@+id/editComment"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_commment"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <Button
+                android:id="@+id/btnPost"
+                android:text="Send"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toEndOf="@+id/editComment"
+                app:layout_constraintTop_toBottomOf="@+id/list_commment"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
